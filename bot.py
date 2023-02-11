@@ -15,4 +15,15 @@ async def kopy(bot, message):
     except Exception as e:
         print(e)
 
+@Bot.on_message(filters.incoming & filters.chat(KANAL1))
+async def kopy(bot, message):
+    try:
+        await bot.send_message(owner, "`Yeni Mesaj Gönderildi`")
+        await bot.copy_message(
+            chat_id = KANALIM,
+            from_chat_id = KANAL1,
+            message_id = message.id)
+    except Exception as e:
+        print(e)
+
 Bot.run()
