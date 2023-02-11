@@ -12,3 +12,5 @@ async def kopy(bot, message):
             message_id = message.id)
     except Exception as e:
         print(e)
+
+Bot.run()
