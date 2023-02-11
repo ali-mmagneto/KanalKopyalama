@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from config import APP_ID, API_HASH, BOT_TOKEN, KANAL, KANALIM
+from config import APP_ID, API_HASH, BOT_TOKEN, KANAL, KANALIM, KANAL1
 
 Bot = Client("kanalkopy", api_id=APP_ID, api_hash=API_HASH, session_string=BOT_TOKEN)
 owner = "mmagneto"
