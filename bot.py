@@ -11,7 +11,7 @@ async def kopy(bot, message):
         await bot.copy_message(
             chat_id = KANALIM,
             from_chat_id = KANAL,
-            message_id = 5103)
+            message_id = message.id)
     except Exception as e:
         print(e)
 
