@@ -3,7 +3,7 @@ from config import APP_ID, API_HASH, BOT_TOKEN, KANAL, KANALIM
 
 Bot = Client("kanalkopy", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 owner = "mmagneto"
-@Client.on_message(filters.incoming & filters.channel)
+@Client.on_message(filters.text | filters.document | filters.photo | filters.audio & filters.channel)
 async def kopy(bot, message):
     try:
         await bot.send_message(owner, "`Yeni Mesaj Gönderildi`")
